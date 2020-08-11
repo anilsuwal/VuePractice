@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Need for computed properties</title>
+</head>
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<body>
+	<div id="root">
+		<h1>All Tasks</h1>
+		<ul>
+			<li v-for="task in tasks" v-text="task.description"></li>
+		</ul>
+
+		<h1>Incomplete Tasks</h1>
+		<ul>
+			<li v-for="task in incompleteTasks" v-text="task.description"></li>
+		</ul>
+	</div>
+
+</body>
+<script>
+	var app = new Vue({
+		el: '#root',
+		data: {
+
+			tasks: [
+				{ description: 'Go to the store', completed: true },
+				{ description: 'Finish Screencast', completed: false },
+				{ description: 'Make donation', completed: false },
+				{ description: 'Clear Inbox', completed: false },
+				{ description: 'Make dinner', completed: false },
+				{ description: 'Clean Room', completed: true },
+			]
+		},
+
+		computed: {
+			incompleteTasks(){
+				return this.tasks.filter(task => !task.completed);
+			}
+		}
+	});
+</script>
+
+</html>
