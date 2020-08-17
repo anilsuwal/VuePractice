@@ -1,0 +1,32 @@
+{
+    "name": "topic-30",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "vue": "^2.6.11"
+    },
+    "babel": {
+        "presets": [
+            "es2015"
+        ]
+    },
+    "ava": {
+        "require": [
+            "babel-register"
+        ]
+    },
+    "devDependencies": {
+        "ava": "^3.11.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-es2016": "^6.24.1",
+        "babel-preset-latest": "^6.24.1",
+        "babel-register": "^6.26.0"
+    }
+}
